@@ -106,3 +106,65 @@
 //     }
 //     document.write(num[i] + "<br>"); 
 // }
+
+
+// let num1 = prompt("Enter a number :", 2);
+// function MulTable(num1) {
+//     for (let num2 = 1; num2 <= 10; num2++) {
+//         total = num1 * num2;
+//         document.write(num1 + "*" + num2 + "=" + total + "<br>");
+//     }
+// }
+// MulTable();
+
+
+// // arguments object
+// let sum = 0;
+// function summ(){
+//     arguments; // stored parameters in array
+//     if(arguments.length == 0){
+//         document.write("No argument passed");
+//         document.write("<br>");
+//     }else{
+//         for(let i = 0; i < arguments.length; i++) {
+//             sum = sum + arguments[0];
+//         }
+//         document.write(sum + "<br>");
+//     }
+// }
+// // summ();
+// // summ(1);
+// // summ(1,2);
+// // summ(1,2,3);
+// // summ(1,2,3,4);
+// // summ(1,2,3,4,5);
+// // We can store a function in variable (example:- "let add = summ") then we can call function using variable (example:- "add(1,2)")  
+// let add = summ;
+// add();
+// add(1);
+// add(1,2);
+// add(1,2,3);
+// add(1,2,3,4);
+// add(1,2,3,4,5);
+
+
+// // Anonymous function - "we can create a function in variable with or without provide a function name"
+// //we can called as a "Function expression" - "when we can create a function in variable"
+// let MulTable = function (num1) {
+//     for (let num2 = 1; num2 <= 10; num2++) {
+//         total = num1 * num2;
+//         document.write(num1 + "*" + num2 + "=" + total + "<br>");
+//     }
+// }
+// MulTable(78);
+
+
+// //Immediately Invoked Function - "we can create a function and then immediately automatically call a function"
+// (function (num1) {
+//     for (let num2 = 1; num2 <= 10; num2++) {
+//         total = num1 * num2;
+//         document.write(num1 + "*" + num2 + "=" + total + "<br>");
+//     }
+// })(6);
+
+

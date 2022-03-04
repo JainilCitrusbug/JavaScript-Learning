@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/css/form.css">
+</head>
+<body>
+    <div class="validation-form">
+        <h1>Validation Form</h1><br>
+        <form action="submit.html" onsubmit="return validation()">
+            <label for="Name">Name :</label><br>
+            <input type="text" class="text" id="name" name="name"><br>
+            <span class="error" id="error-name"></span><br>
+
+            <label for="Email">Email :</label><br>
+            <input type="text" class="text" id="email" name="email"><br>
+            <span class="error" id="error-email"></span><br>
+    
+            <label for="Mobile Number">Mobile No.:</label><br>
+            <input type="text" class="text" id="mobile" name="mobile"><br>
+            <span class="error" id="error-mobile"></span><br>
+    
+            <label for="Password">Password :</label><br>
+            <input type="password" class="text" id="pass" name="pass" autocomplete="off"><br>
+            <span class="error" id="error-pass"></span><br>
+    
+            <label for="Confirm Password">Confirm Password :</label><br>
+            <input type="password" class="text" id="con-pass" name="con-pass" autocomplete="off"><br>
+            <span class="error" id="error-conpass"></span><br>
+    
+            <input type="submit" class="button" id="submit" value="Submit">
+        </form>
+    </div>
+    <script src="Assets/JavaScript/validation.js"></script>
+</body>
+</html>
