@@ -168,3 +168,12 @@
 // })(6);
 
 
+// // Object 
+// let person = {
+//     firstName : "Jainil",
+//     lastName : "Prajapati",
+//     age : 21
+// };
+// for(let i in person){
+//     document.write(i + " : " + person[i] + "<br>");
+// }

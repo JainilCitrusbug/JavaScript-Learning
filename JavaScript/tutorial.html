@@ -5,9 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        .circle{
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
     <h1 id="title">JS Tutorial</h1>
-    <script src="Assets/JavaScript/tutorial.js"></script>
+
+    <button id="btn1" style="background-color: aqua; width: 200px; height: 50px;">Button1</button>
+    <button id="btn2" style="background-color: aqua; width: 200px; height: 50px;">Button2</button>
+    <br><br>
+    <div id="colored-div" style="background-color: rgb(0, 225, 255); width: 300px; height: 300px; border: 5px solid black; padding: 10px; margin: 10px;"></div>
+
+    <!-- before -->
+    <ul id="list">
+        <!-- prepend -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <!-- append -->
+    </ul>
+    <!-- after -->
+
+    <!-- <script src="Assets/JavaScript/tutorial.js"></script> -->
+    <script>
+        // $("#btn").click(function () {
+        //     $("#title").text("Hello");
+        // });
+
+        // $("#colored-div").on({
+        //     click: function(){
+        //         $(this).css("background-color","red");
+        //     },
+        //     mouseenter: function(){
+        //         $(this).css("background-color","blue");
+        //     },
+        //     mouseleave: function(){
+        //         $(this).css("background-color","yellow");
+        //     },
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeOut(1000);
+        // });
+        // //
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeIn(1000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeToggle(1000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").fadeTo(1000, 0.3);
+        // });
+        // //
+        // $("#btn2").click(function(){
+        //     $("#colored-div").fadeTo(1000, 1);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").slideUp(1000);
+        // });
+        // //
+        // $("#btn2").click(function(){
+        //     $("#colored-div").slideDown(1000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").slideToggle(1000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").animate({
+        //         opacity: "0.5",
+        //         width: "200px",
+        //         height: "200px",
+        //     }, 2000);
+        // });
+        // $("#btn2").click(function(){
+        //     $("#colored-div").stop();
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").hide(3000, function(){
+        //         alert("Div hidden")
+        //     });
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").css("background-color", "red").slideUp(1000).slideDown(1000);
+        // });
+
+        // $("#btn1").click(function(){
+        //     // $("#list").before("<li>Before Item</li>");
+        //     // $("#list").prepend("<li>Prepend Item</li>");
+        //     // $("#list").append("<li>Append Item</li>");
+        //     // $("#list").after("<li>After Item</li>");
+
+        //     $("#list").before("<li>Before Item</li>").prepend("<li>Prepend Item</li>").append("<li>Append Item</li>").after("<li>After Item</li>");
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#list").empty();
+        // });
+
+        // $("#btn2").click(function(){
+        //     $("#list").remove();
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").addClass("circle");
+        // });
+        // $("#btn2").click(function(){
+        //     $("#colored-div").removeClass("circle");
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").toggleClass("circle");
+        // });
+
+        // $("#btn1").click(function(){
+        //     let css = $("#colored-div").css("background-color");
+        //     alert(css);
+        // });
+
+        // $("#btn1").click(function(){
+        //     $("#colored-div").css({
+        //         "background-color": "red",
+        //         "border": "1px solid black",
+        //         "border-radius": "50%"
+        //     });
+        // });
+
+        // $("#btn1").click(function(){
+        //     let a = $("#colored-div").width();
+        //     let b = $("#colored-div").innerWidth();
+        //     let c = $("#colored-div").outerWidth();
+        //     let d = $("#colored-div").outerWidth(true);
+        //     let e = $("#colored-div").height();
+        //     let f = $("#colored-div").innerHeight();
+        //     let g = $("#colored-div").outerHeight();
+        //     let h = $("#colored-div").outerHeight(true);
+        //     alert("width = "+a);
+        //     alert("innerwidth = "+b);
+        //     alert("outerwidth = "+c);
+        //     alert("outerwidth(true) = "+d);
+        //     alert("height = "+e);
+        //     alert("innerheight = "+f);
+        //     alert("outerheight = "+g);
+        //     alert("outerheight(true) = "+h);
+        // });
+        
+        // // No Conflict Method
+        // $.noConflict();
+        // jQuery("#btn1").click(function(){
+        //     jQuery("#title").text("This is a JS Tutorial");
+        // });
+        // jQuery("#btn2").click(function(){
+        //     jQuery("#title").text("JS Tutorial");
+        // });
+
+        // // No Conflict Method using variable
+        // let jQ = $.noConflict();
+        // jQ("#btn1").click(function(){
+        //     jQ("#title").text("This is a JS Tutorial");
+        // });
+        // jQ("#btn2").click(function(){
+        //     jQ("#title").text("JS Tutorial");
+        // });
+    </script>
+
 </body>
 </html>

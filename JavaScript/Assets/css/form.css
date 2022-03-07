@@ -8,7 +8,10 @@ body {
 }
 
 .validation-form{
-    margin: 140px 798px;
+    margin: 200px 780px;
+    width: 360px;
+    height: 437px;
+    text-align: center;
     padding: 10px 10px;
     color: white;
     background-color: rgb(59, 59, 59);
