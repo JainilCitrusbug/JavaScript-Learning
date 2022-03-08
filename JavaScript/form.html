@@ -1,39 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Assets/css/form.css">
+    <!-- <script defer src="Assets/JavaScript/validation.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 </head>
+
 <body>
     <div class="validation-form">
         <h1>Validation Form</h1><br>
-        <form action="#" onsubmit="return validate()">
+        <form action="">
             <label for="Name">Name :</label><br>
             <input type="text" class="text" id="name" name="name"><br>
             <span class="error" id="error-name"></span><br>
-            
+
             <label for="Email">Email :</label><br>
             <input type="text" class="text" id="email" name="email"><br>
             <span class="error" id="error-email"></span><br>
-    
+
             <label for="Mobile Number">Mobile No.:</label><br>
             <input type="text" class="text" id="mobile" name="mobile"><br>
             <span class="error" id="error-mobile"></span><br>
-            
+
             <label for="Password">Password :</label><br>
             <input type="password" class="text" id="pass" name="pass" autocomplete="off"><br>
             <span class="error" id="error-pass"></span><br>
-            
+
             <label for="Confirm Password">Confirm Password :</label><br>
             <input type="password" class="text" id="con-pass" name="con-pass" autocomplete="off"><br>
             <span class="error" id="error-conpass"></span><br>
-            
-            <input type="submit" class="button" id="submit" value="Submit">
+
+            <input type="submit" class="button" id="button" value="Submit">
         </form>
     </div>
-    <script src="Assets/JavaScript/validation.js"></script>
+
+    <script>
+        
+        // name validation
+        let nameError = true;
+        $("#name").keyup(function () {
+            nameValidation();
+        });
+        function nameValidation() {
+            let name = $("#name").val();
+            if (name == "") {
+                $("#error-name").text("**Please enter your name");
+                nameError = false;
+                // return false;
+            } else if (!isNaN(name[0])) {
+                $("#error-name").text("**Name must be start with character...");
+                nameError = false;
+                // return false;
+            } else {
+                $("#error-name").text("");
+                nameError = true;
+                // return true;
+            }
+        }
+
+        // email validation
+        let emailError = true;
+        $("#email").keyup(function () {
+            emailValidation();
+        });
+        function emailValidation() {
+            let email = $("#email").val();
+            let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (email == "") {
+                $("#error-email").text("**Please enter your email...");
+                emailError = false;
+                // return false;
+            } else if (mailformat.test(email) == false) {
+                $("#error-email").text("Please enter valid email...");
+                emailError = false;
+                // return false;
+
+            } else {
+                $("#error-email").text("");
+                emailError = true;
+                // return true;
+            }
+        }
+
+        // mobile number validation
+        let numberError = true;
+        $("#mobile").keyup(function () {
+            numberValidation();
+        });
+        function numberValidation() {
+            let number = $("#mobile").val();
+            if (number == "") {
+                $("#error-mobile").text("**Please enter your mobile number...");
+                numberError = false;
+                // return false;
+            } else if (isNaN(number)) {
+                $("#error-mobile").text("**Only numbers are allowed...");
+                numberError = false;
+                // return false;
+            } else if (number.length != 10) {
+                $("#error-mobile").text("**Mobile number must have 10 numbers...");
+                numberError = false;
+                // return false;
+            } else {
+                $("#error-mobile").text("");
+                numberError = true;
+                // return true;
+            }
+        }
+
+        // Password validation
+        let passError = true;
+        $("#pass").keyup(function () {
+            passValidation();
+        });
+        function passValidation() {
+            let pass = $("#pass").val();
+            if (pass == "") {
+                $("#error-pass").text("**Please enter your password...");
+                passError = false;
+                // return false;
+            } else if (pass.length < 6) {
+                $("#error-pass").text("**Password length must be minmum 6 ...");
+                passError = false;
+                // return false;
+            } else {
+                $("#error-pass").text("");
+                passError = true;
+                // return true;
+            }
+        }
+
+        // Confirm password validation
+        let conpassError = true;
+        $("#con-pass").keyup(function () {
+            conpassValidation();
+        });
+        function conpassValidation() {
+            let conpass = $("#con-pass").val();
+            let pass = $("#pass").val();
+            if (conpass == "" || conpass != pass) {
+                $("#error-conpass").text("**Password are not same. Please check...");
+                conpassError = false;
+                // return false;
+            } else {
+                $("#error-conpass").text("");
+                conpassError = true;
+                // return true;
+            }
+        }
+
+        // submit button
+        $("#button").click(function () {
+            nameValidation();
+            emailValidation();
+            numberValidation();
+            passValidation();
+            conpassValidation();
+            if ((nameError == true) && (emailError == true) && (numberError == true) && (passError == true) && (conpassError == true)) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    </script>
 </body>
+
 </html>
